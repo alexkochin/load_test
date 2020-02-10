@@ -6,7 +6,7 @@ import http from "k6/http";
 export let options = {
   // simulate rampup of traf11fic from 1 to 200 users over 5 minutes.
   stages: [
-    { duration: "5m", target: 5 },
+    { duration: "15s", target: 1 },
   ]
 };
 
