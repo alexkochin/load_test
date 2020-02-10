@@ -4,7 +4,7 @@ import http from "k6/http";
 
 // See https://docs.k6.io/docs/options for other options
 export let options = {
-  // simulate rampup of traffic from 1 to 200 users over 5 minutes.
+  // simulate rampup of traf11fic from 1 to 200 users over 5 minutes.
   stages: [
     { duration: "5m", target: 5 },
   ]
