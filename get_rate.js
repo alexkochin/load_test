@@ -9,7 +9,8 @@ export const options = {
 };
 
 export default function() {
-  let   mytok = access_token()
+  
+  let mytok = access_token()
     console.log("Hoora " + mytok)
 
 }
