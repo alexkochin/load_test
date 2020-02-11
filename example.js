@@ -29,7 +29,7 @@ let authenticate = function(user, password){
 let getUser = function(user_id, token){
   let userRes = http.get(`${baseUrl}/anything/${user_id}`, {}, {
     headers: {
-      Authorization: `Token ${token}`
+      Authorization: `Token ${tok en}`
     }
   });
 

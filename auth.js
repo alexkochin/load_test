@@ -3,7 +3,7 @@ import http from "k6/http";
 
 export const options = {
   stages: [
-    { duration: "10s", target: 1 }
+    { duration: "1s", target: 1 }
   ]
 };
 
@@ -14,7 +14,8 @@ export default function() {
   let auth_headers = { headers: { "Content-Type": "application/x-www-form-urlencoded; charset=utf-8", "Host": "testing.carggo.com", "Referer": "https://testing.carggo.com/" } }
 
   response = http.post(keycloak_url, auth_payload, auth_headers  )
-  let access_token = response.json().access_token;
-  //  console.log("Access Token: " + access_token)
+  let access_token = response.json().access_token
+  let access_header = "Bearer "+ access_token
+  //console.log("Access Token: " + access_header)
   return access_token
 }
