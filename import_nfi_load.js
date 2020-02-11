@@ -7,7 +7,7 @@ import { Trend } from "k6/metrics";
 var myTrend = new Trend("waiting_time");
 
 
-const payload = JSON.parse(open("./nfi_payload.json"))
+const payload = JSON.parse(open("./test_data/nfi_payload.json"))
 
 //  console.log(JSON.stringify(payload))
 
@@ -19,7 +19,7 @@ export const options = {
 
 export default function() {
   let response
-  let nfi_load_import_url = "http://datalake.testing.swagger.carggo.int/datalake/datalake/loads"
+  let nfi_load_import_url = "http://datalake.testing.swagger.carggo.int/v1/datalake/loads"
   let headers = { headers: { "Content-Type": "application/json" } }
 
   response = http.post(nfi_load_import_url, JSON.stringify(payload), headers  )
