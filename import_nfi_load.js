@@ -9,7 +9,7 @@ var myTrend = new Trend("waiting_time");
 
 const payload = JSON.parse(open("./nfi_payload.json"))
 
-  console.log(JSON.stringify(payload))
+//  console.log(JSON.stringify(payload))
 
 export const options = {
   stages: [
@@ -24,7 +24,7 @@ export default function() {
 
   response = http.post(nfi_load_import_url, JSON.stringify(payload), headers  )
 
-    //console.log(response.status + ": " + response.body);
+    console.log(response.status + ": " + response.body);
     //console.log("Response time was " + String(response.timings.duration) + " ms");
     //console.log("Total timings: " + myTrend.add(response.timings.waiting));
     myTrend.add(response.timings.waiting)
