@@ -11,6 +11,7 @@ const payload = JSON.parse(open("./test_data/nfi_payload.json"))
 
 //  console.log(JSON.stringify(payload))
 
+
 export const options = {
   stages: [
     { duration: "5s", target: 1 }
@@ -18,9 +19,11 @@ export const options = {
 };
 
 export default function() {
+  let auth_header = access_header()
+    console.log("Access Header:" + auth_header)
   let response
   let nfi_load_import_url = "http://datalake.testing.swagger.carggo.int/v1/datalake/loads"
-  let headers = { headers: { "Content-Type": "application/json" } }
+  let headers = { headers: { "Content-Type": "application/json", "authorization": auth_header } }
 
   response = http.post(nfi_load_import_url, JSON.stringify(payload), headers  )
 

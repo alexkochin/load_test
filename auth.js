@@ -15,6 +15,6 @@ export default function() {
 
   response = http.post(keycloak_url, auth_payload, auth_headers  )
   let access_header = "Bearer " + response.json().access_token;
-    console.log("Access header: " + access_header)
+  //  console.log("Access header: " + access_header)
   return access_header
 }
