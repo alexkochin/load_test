@@ -1,16 +1,59 @@
 {
+  "loadSource": {
+    "loadId": 65423,
+    "companyId": "NMKJ",
+    "companyIdType": 2
+  },
+  "stop": [
+    {
+      "type": "CL",
+      "order": 0,
+      "location": {
+        "country": "US",
+        "city": "Chicago",
+        "state": "IL",
+        "zip": "60611",
+        "streetAddress": "600 E Grand Ave",
+        "latitude": "41.891844",
+        "longitude": "-87.602912"
+      },
+      "weight": 5000,
+      "volume": 15,
+      "quantity": 2,
+      "warehouseName": "Trak Auto",
+      "warehouseId": 33211867,
+      "contact": {
+        "name": "John",
+        "phoneNumber": 121331343,
+        "email": "my@email.com"
+      },
+      "appointmentOpenDateTime": "2019-12-19T12:00:00.000Z",
+      "appointmentCloseDateTime": "2019-12-19T16:00:00.000Z",
+      "estimateArriveDateTime": "2019-12-19T16:00:00.000Z",
+      "factArriveDateTime": "2019-12-19T16:15:00.000Z",
+      "estimateDepartDateTime": "2019-12-19T18:00:00.000Z",
+      "factDepartDateTime": "2019-12-19T17:49:00.000Z"
+    }
+  ],
+  "rate": {
+    "transportMode": "ftl",
+    "transportType": "van",
+    "miles": 423,
+    "totalShipperCost": 1276,
+    "totalLinehaulCost": 956,
+    "totalFuelCost": 320,
+    "pickupDate": "2020-07-21T00:00:00.000Z",
+    "bookedDate": "2020-07-19T00:00:00.000Z"
+  },
   "loadDetails": {
-    "carrier": {
-      "companyId": 300001088,
-      "driverName": "Bob",
-      "driverPhone": 3598922323,
-      "trailerNumber": "7823B",
-      "truckNumber": "GH2132"
-    },
     "commodity": "Racks",
-    "height": 5,
-    "length": 40,
     "quantity": 20,
+    "specialInstruction": "Some notice is here",
+    "weight": 22000,
+    "length": 40,
+    "width": 4,
+    "height": 5,
+    "temperature": 32,
     "refNumbers": [
       {
         "refCode": "HGJ9891",
@@ -18,61 +61,14 @@
         "refTypeValue": 2
       }
     ],
-    "specialInstruction": "Some notice is here",
+    "carrier": {
+      "companyId": 300001088,
+      "truckNumber": "GH2132",
+      "trailerNumber": "7823B",
+      "driverName": "Bob",
+      "driverPhone": "3598922323"
+    },
     "status": "LOADED",
-    "temperature": 32,
-    "tordFlag": false,
-    "weight": 22000,
-    "width": 4
-  },
-  "loadSource": {
-    "importCompanyId": "string",
-    "importCompanyIdType": "string",
-    "loadId": "string",
-    "shipperId": "string",
-    "shipperName": "string"
-  },
-  "rate": {
-    "bookedDate": "string",
-    "miles": 0,
-    "pickupDate": "string",
-    "totalAccessorialCost": 0,
-    "totalCarrierCost": 0,
-    "totalFuelCost": 0,
-    "totalLinehaulCost": 0,
-    "totalShipperCost": 0,
-    "transportMode": "ftl",
-    "transportType": "van"
-  },
-  "stop": [
-    {
-      "appointmentCloseDateTime": "2019-12-19T16:00Z",
-      "appointmentOpenDateTime": "2019-12-19T12:00Z",
-      "contact": {
-        "email": "my@email.com",
-        "name": "John",
-        "phoneNumber": 121331343
-      },
-      "estimateArriveDateTime": "2019-12-19T16:00Z",
-      "estimateDepartDateTime": "2019-12-19T18:00Z",
-      "factArriveDateTime": "2019-12-19T16:15Z",
-      "factDepartDateTime": "2019-12-19T17:49Z",
-      "location": {
-        "city": "string",
-        "country": "string",
-        "latitude": "string",
-        "longitude": "string",
-        "state": "string",
-        "streetAddress": "string",
-        "zip": "string"
-      },
-      "order": 0,
-      "quantity": 2,
-      "type": "CL",
-      "volume": 15,
-      "warehouseId": 33211867,
-      "warehouseName": "Trak Auto",
-      "weight": 5000
-    }
-  ]
+    "tordFlag": false
+  }
 }
