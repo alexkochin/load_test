@@ -1,0 +1,107 @@
+{
+  "loadDetails": {
+    "carrier": {
+      "companyId": 300001088,
+      "driverName": "Bob",
+      "driverPhone": 3598922323,
+      "trailerNumber": "7823B",
+      "truckNumber": "GH2132"
+    },
+    "commodity": "Racks",
+    "height": 5.5,
+    "length": 40.2,
+    "quantity": 20,
+    "refNumbers": [
+      {
+        "refCode": "HGJ9891",
+        "refType": "carrier",
+        "refTypeValue": 2
+      }
+    ],
+    "specialInstruction": "Some notice is here",
+    "status": "LOADED",
+    "temperature": 32.1,
+    "tordFlag": false,
+    "weight": 22000,
+    "width": 4.6
+  },
+  "loadSource": {
+    "importCompanyId": "string",
+    "importCompanyIdType": "string",
+    "loadId": "string",
+    "shipperId": "string",
+    "shipperName": "string"
+  },
+  "rate": {
+    "bookedDate": "2020-01-11",
+    "miles": 1100,
+    "pickupDate": "2020-01-13",
+    "totalAccessorialCost": 0,
+    "totalCarrierCost": 2500,
+    "totalFuelCost": 0,
+    "totalLinehaulCost": 0,
+    "totalShipperCost": 0,
+    "transportMode": "ftl",
+    "transportType": "van"
+  },
+  "stop": [
+    {
+      "appointmentCloseDateTime": "2019-12-19T16:00Z",
+      "appointmentOpenDateTime": "2019-12-19T12:00Z",
+      "contact": {
+        "email": "my@email.com",
+        "name": "John",
+        "phoneNumber": 121331343
+      },
+      "estimateArriveDateTime": "2019-12-19T16:00Z",
+      "estimateDepartDateTime": "2019-12-19T18:00Z",
+      "factArriveDateTime": "2019-12-19T16:15Z",
+      "factDepartDateTime": "2019-12-19T17:49Z",
+      "location": {
+        "city": "string",
+        "country": "string",
+        "latitude": 0,
+        "longitude": 0,
+        "state": "string",
+        "streetAddress": "string",
+        "zip": "60636"
+      },
+      "order": 0,
+      "quantity": 2,
+      "type": "CL",
+      "volume": 15,
+      "warehouseId": 33211867,
+      "warehouseName": "Trak Auto",
+      "weight": 5000
+    },
+ {
+      "appointmentCloseDateTime": "2019-12-19T16:00Z",
+      "appointmentOpenDateTime": "2019-12-19T12:00Z",
+      "contact": {
+        "email": "my@email.com",
+        "name": "John",
+        "phoneNumber": 121331343
+      },
+      "estimateArriveDateTime": "2019-12-19T16:00Z",
+      "estimateDepartDateTime": "2019-12-19T18:00Z",
+      "factArriveDateTime": "2019-12-19T16:15Z",
+      "factDepartDateTime": "2019-12-19T17:49Z",
+      "location": {
+        "city": "string",
+        "country": "string",
+        "latitude": 0,
+        "longitude": 0,
+        "state": "string",
+        "streetAddress": "string",
+        "zip": "60638"
+      },
+      "order": 0,
+      "quantity": 2,
+      "type": "CL",
+      "volume": 15,
+      "warehouseId": 33211867,
+      "warehouseName": "Trak Auto",
+      "weight": 5000
+    }
+  ]
+}
