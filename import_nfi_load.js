@@ -20,7 +20,6 @@ export const options = {
 
 export default function() {
   let auth_header = access_header()
-    console.log("Access Header:" + auth_header)
   let response
   let nfi_load_import_url = "http://datalake.testing.swagger.carggo.int/v1/datalake/loads"
   let headers = { headers: { "Content-Type": "application/json", "authorization": auth_header } }
