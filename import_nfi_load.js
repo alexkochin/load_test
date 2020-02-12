@@ -27,10 +27,6 @@ export default function(auth_header) {
   let headers = { headers: { "Content-Type": "application/json", "authorization": auth_header } }
 
   response = http.post(nfi_load_import_url, JSON.stringify(payload), headers  )
-
-    //console.log(response.status + ": " + JSON.stringify(response.body));
-    //console.log("Response time was " + String(response.timings.duration) + " ms");
-    //console.log("Total timings: " + myTrend.add(response.timings.waiting));
     myTrend.add(response.timings.waiting)
 
     check(response, {
