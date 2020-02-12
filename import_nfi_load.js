@@ -13,14 +13,12 @@ const payload = JSON.parse(open("./test_data/nfi_payload.json"))
 export function setup() {
   const auth_header = access_header();
   return auth_header
-};
-
+  };
 
 export const options = {
   stages: [
-    { duration: "3s", target: 1 }
-  ],
-
+    { duration: "30s", target: 50 }
+  ]
 };
 
 export default function(auth_header) {
