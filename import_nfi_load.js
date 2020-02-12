@@ -14,7 +14,7 @@ const payload = JSON.parse(open("./test_data/nfi_payload.json"))
 
 export const options = {
   stages: [
-    { duration: "180s", target: 50 }
+    { duration: "120s", target: 1000 }
   ]
 };
 
