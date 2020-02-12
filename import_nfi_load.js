@@ -17,16 +17,17 @@ export function setup() {
 
 export const options = {
   stages: [
-    { duration: "3s", target: 1 }
+    { duration: "200s", target: 1000 }
   ]
 };
 
 export default function(auth_header) {
   let response
-  let nfi_load_import_url = "http://datalake.testing.swagger.carggo.int/v1/datalake/loads"
-  let headers = { headers: { "Content-Type": "application/json", "authorization": auth_header } }
+  let nfi_load_import_url = "https://testing.carggo.com/v1/datalake/loads"
+  let headers = { headers: { "Content-Type": "application/json", "accept": "application/json", "authorization": auth_header } }
 
   response = http.post(nfi_load_import_url, JSON.stringify(payload), headers  )
+//  console.log(response.status)
     myTrend.add(response.timings.waiting)
 
     check(response, {
