@@ -10,6 +10,7 @@ var myTrend = new Trend("waiting_time");
 const payload = JSON.parse(open("./test_data/nfi_payload.json"))
 
 //  console.log(JSON.stringify(payload))
+<<<<<<< HEAD
 export function setup() {
   const auth_header = access_header();
   return auth_header
@@ -17,11 +18,19 @@ export function setup() {
 
 export const options = {
   stages: [
+=======
+
+
+export const options = {
+  stages: [
+    { duration: "3s", target: 1 }
+  ],
+
+>>>>>>> 968d00be33e725077d9c3972cc865c7db263cf8c
     { duration: "30s", target: 50 }
   ]
 };
 
-export default function(auth_header) {
   let response
   let nfi_load_import_url = "http://datalake.testing.swagger.carggo.int/v1/datalake/loads"
   let headers = { headers: { "Content-Type": "application/json", "authorization": auth_header } }
