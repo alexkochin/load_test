@@ -10,10 +10,6 @@ var myTrend = new Trend("waiting_time");
 const payload = JSON.parse(open("./test_data/nfi_payload.json"))
 
 //  console.log(JSON.stringify(payload))
-export function setup() {
-  const auth_header = access_header();
-  return auth_header
-};
 
 
 export const options = {
@@ -21,9 +17,10 @@ export const options = {
     { duration: "3s", target: 1 }
   ],
 
+    { duration: "30s", target: 50 }
+  ]
 };
 
-export default function(auth_header) {
   let response
   let nfi_load_import_url = "http://datalake.testing.swagger.carggo.int/v1/datalake/loads"
   let headers = { headers: { "Content-Type": "application/json", "authorization": auth_header } }
