@@ -5,11 +5,11 @@ import { Trend , Rate} from "k6/metrics";
 
 export const options = {
   stages: [
-    { duration: "30s", target: 1000 }
+    { duration: "10s", target: 50 }
   ]
 };
 
-var duration_trend = new Trend("duration_time");
+var duration_trend = new Trend("Reques duration time");
 var fail_rate = new Rate("failed requests");
 const payload = JSON.parse(open("./test_data/nfi_payload.json"));
 
@@ -23,7 +23,7 @@ export function setup() {
 
 export default function(auth_header) {
   let response
-  let nfi_load_import_url = "https://testing.carggo.com/v1/datalake/loads"
+  let nfi_load_import_url = "https://testapi.carggo.com/v1/datalake/loads"
   let headers = { headers: { "Content-Type": "application/json", "authorization": auth_header } }
 
     response = http.post(nfi_load_import_url, JSON.stringify(payload), headers  )
