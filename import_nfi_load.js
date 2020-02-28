@@ -31,9 +31,12 @@ export default function(auth_header) {
     response = http.post(nfi_load_import_url, JSON.stringify(payload), headers  )
     duration_trend.add(response.timings.duration)
     fail_rate.add(response.status !== 201)
-
+    console.log(response.status)
     check(response, {
       "is status 201": (r) => r.status === 201
   });
 
 }
+
+// run this with following command:
+// k6 run --out influxdb=http://mon.carggo.local:8086/grafana import_nfi_load.js

@@ -1,50 +1,12 @@
 {
-  "loadDetails": {
-    "carrier": {
-      "companyId": 300001088,
-      "driverName": "Bob",
-      "driverPhone": 3598922323,
-      "trailerNumber": "7823B",
-      "truckNumber": "GH2132"
-    },
-    "commodity": "Racks",
-    "height": 5.5,
-    "length": 40.2,
-    "quantity": 20,
-    "refNumbers": [
-      {
-        "refCode": "HGJ9891",
-        "refType": "carrier",
-        "refTypeValue": 2
-      }
-    ],
-    "specialInstruction": "Some notice is here",
-    "status": "LOADED",
-    "temperature": 32.1,
-    "tordFlag": false,
-    "weight": 22000,
-    "width": 4.6
-  },
   "loadSource": {
-    "importCompanyId": "string",
-    "importCompanyIdType": "string",
-    "loadId": "string",
-    "shipperId": "string",
-    "shipperName": "string"
+    "shipperId": "65423",
+    "loadId": 65423,
+    "companyId": "NMKJ",
+    "companyIdType": 2,
+    "carggoId": "S131-113214"
   },
-  "rate": {
-    "bookedDate": "2020-01-11",
-    "miles": 1100,
-    "pickupDate": "2020-01-13",
-    "totalAccessorialCost": 0,
-    "totalCarrierCost": 2500,
-    "totalFuelCost": 0,
-    "totalLinehaulCost": 0,
-    "totalShipperCost": 0,
-    "transportMode": "ftl",
-    "transportType": "van"
-  },
-  "stop": [
+  "stops": [
     {
       "appointmentCloseDateTime": "2019-12-19T16:00Z",
       "appointmentOpenDateTime": "2019-12-19T12:00Z",
@@ -58,12 +20,12 @@
       "factArriveDateTime": "2019-12-19T16:15Z",
       "factDepartDateTime": "2019-12-19T17:49Z",
       "location": {
-        "city": "string",
-        "country": "string",
-        "latitude": 0,
-        "longitude": 0,
-        "state": "string",
-        "streetAddress": "string",
+        "city": "Chicago",
+        "country": "US",
+        "latitude": "41.891844",
+        "longitude": "-87.602912",
+        "state": "IL",
+        "streetAddress": "600 E Grand Ave",
         "zip": "60636"
       },
       "order": 0,
@@ -74,7 +36,7 @@
       "warehouseName": "Trak Auto",
       "weight": 5000
     },
- {
+    {
       "appointmentCloseDateTime": "2019-12-19T16:00Z",
       "appointmentOpenDateTime": "2019-12-19T12:00Z",
       "contact": {
@@ -87,13 +49,13 @@
       "factArriveDateTime": "2019-12-19T16:15Z",
       "factDepartDateTime": "2019-12-19T17:49Z",
       "location": {
-        "city": "string",
-        "country": "string",
-        "latitude": 0,
-        "longitude": 0,
-        "state": "string",
-        "streetAddress": "string",
-        "zip": "60638"
+        "city": "Chicago",
+        "country": "US",
+        "latitude": "41.891844",
+        "longitude": "-87.602912",
+        "state": "IL",
+        "streetAddress": "600 E Grand Ave",
+        "zip": "60636"
       },
       "order": 0,
       "quantity": 2,
@@ -103,5 +65,41 @@
       "warehouseName": "Trak Auto",
       "weight": 5000
     }
-  ]
+  ],
+  "rate": {
+    "transportMode": "FTL",
+    "transportType": "VAN",
+    "miles": 423,
+    "totalShipperCost": 1276,
+    "totalLinehaulCost": 956,
+    "totalFuelCost": 320,
+    "pickupDate": "2020-01-13T16:00Z",
+    "bookedDate": "2020-01-11T16:00Z"
+  },
+  "loadDetails": {
+    "commodity": "Racks",
+    "quantity": 20,
+    "specialInstruction": "Some notice is here",
+    "weight": 22000,
+    "length": 40.2,
+    "width": 4.6,
+    "height": 5.5,
+    "temperature": 32.1,
+    "refNumbers": [
+      {
+        "refCode": "HGJ9891",
+        "refType": "CARRIER",
+        "refTypeValue": 2
+      }
+    ],
+    "carrier": {
+      "companyId": 300001088,
+      "truckNumber": "GH2132",
+      "trailerNumber": "7823B",
+      "driverName": "Bob",
+      "driverPhone": "3598922323"
+    },
+    "status": "LOADED",
+    "tordFlag": false
+  }
 }
