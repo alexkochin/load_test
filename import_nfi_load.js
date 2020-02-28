@@ -7,7 +7,7 @@ import papaparse from './node_modules/papaparse/papaparse.js';
 
 export const options = {
   stages: [
-    { duration: "10s", target: 50 }
+    { duration: "11s", target: 50 }
   ]
 };
 
