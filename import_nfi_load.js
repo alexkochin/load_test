@@ -22,7 +22,7 @@ export function setup() {
 
 
 const payload = nfi_json()
-console.log(JSON.stringify(nfi_json()))
+console.log(nfi_json())
 
 //const file_payload = JSON.parse(open("./test_data/nfi_payload.json"));
 //console.log(JSON.stringify(file_payload))
