@@ -11,18 +11,22 @@ var fail_rate = new Rate("failed requests");
 
 export const options = {
   stages: [
-    { duration: "3s", target: 1 }
+    { duration: "1s", target: 1 }
   ]
 };
 
 export function setup() {
   const auth_header = access_header()
+  const payload = nfi_json()
+  console.log('My JSON: ' + payload)
+
+  return payload
   return auth_header
   };
 
 
-const payload = nfi_json()
-console.log(nfi_json())
+//const payload = JSON.stringify(nfi_json())
+//console.log('My JSON: ' + payload)
 
 //const file_payload = JSON.parse(open("./test_data/nfi_payload.json"));
 //console.log(JSON.stringify(file_payload))
@@ -37,13 +41,13 @@ export default function(auth_header, payload) {
   let response
   let nfi_load_import_url = "https://testapi.carggo.com/v1/datalake/loads"
   let headers = { headers: { "Content-Type": "application/json", "authorization": auth_header } }
+  let body_to_send = JSON.stringify(payload)
+  console.log('Data was: ' + payload)
 
-  let body_to_send = payload
+    response = http.post(nfi_load_import_url, body_to_send, headers  )
 
-    response = http.post(nfi_load_import_url, JSON.stringify(payload), headers  )
     duration_trend.add(response.timings.duration)
     fail_rate.add(response.status !== 200)
-    console.log('Data was: ' + JSON.stringify(payload))
     console.log('Response code is ' + response.status + response.body)
     check(response, {
       "Response 200": (r) => r.status === 200

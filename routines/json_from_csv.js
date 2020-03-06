@@ -6,5 +6,6 @@ const csvData = papaparse.parse(open('../test_data/small_example.csv'), { header
 
 export default function(){
 let nfi_json = JSON.stringify(csvData.data[0])
+return nfi_json
 //console.log(nfi_json)
 }
